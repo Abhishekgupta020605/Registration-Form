@@ -1,68 +1,113 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Registration Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form id="myForm" class="form-box">
+        <h2>Registration Form</h2>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Goggle From</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            background-color: hsl(197, 91%, 73%);
-        }     
-    </style>
-    </head>
+        <!-- Name -->
+        <div class="input-group">
+          <input type="text" id="username" name="username" required />
+          <label>Name</label>
+        </div>
 
-<body>
-    
-    <form><b>
-        <h1>Registration Form :-</h1>
-        <label for="abhishek"> Name :</label><br>
-        <input type="text" name="username " placeholder="Name">
-        <br><br>
-        <label for="phone"> Phone Number :</label><br>
-        <input type="number" name="phone" placeholder="Phone">
-        <br><br>
-        <label for="email"> Email : </label><br>
-        <input type="email" name="email " placeholder="Email">
-        <br><br>
-        <label for="password"> Passowrd : </label><br>
-        <input type="password" name="password" placeholder="Password">
-        <br><br>
-        <label for="dob">Date of Birth :</label><br>
-        <input type="date" id="dob" name="dob" required>
-        <br><br>
-        <label for="Question"> Suject :</label><br>
-        <input type="checkbox" name="English" value="English"> English
-        </label><br>
-        <label>
-            <input type="checkbox" name="Hindi" value="Hindi"> Hindi
-        </label><br>
-        <label>
-            <input type="checkbox" name="Physics" value="Hindi"> Physics
-        </label><br>
-        <label>
-            <input type="checkbox" name="Math" value="Hindi"> Math
-        </label>
-        <br><br>
-        <label for="gender">Gender :</label><br>
-        <input type="radio" name="gender" value="male">
-        <label for="male">Male</label><br>
-        <input type="radio" name="gender" value="female">
-        <label for="female">Female</label><br><br>
-        <label for="branch">Choose a branch:</label>
-        <select id="branch" name="branch">
-            <option value="branch">Select-Branch</option >
-            <option value="main">CSE</option>
-            <option value="development">CS</option>
-            <option value="feature">CSE-IOT</option>
-            <option value="testing">CSE-IT</option>
-        </select>
-        <br><br>
-        <input type="submit" value="Submit">
-    </form>
+       <!-- Phone Number -->
+<div class="input-group">
+  <input
+    type="tel"
+    id="phone"
+    name="phone"
+    required
+    title="Enter digits only"
+  />
+  <label>Phone Number</label>
+</div>
 
-</body>
+        <!-- Email -->
+        <div class="input-group">
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            title="Email must end with @gmail.com"
+          />
+          <label>Email</label>
+        </div>
 
+        <!-- Password -->
+        <div class="input-group">
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            title="Must contain 8+ chars, uppercase, lowercase, number & special char"
+          />
+          <label>Password</label>
+        </div>
+
+        <!-- Date of Birth -->
+        <div class="input-group">
+          <input type="date" id="dob" name="dob" required />
+          <label>Date of Birth</label>
+        </div>
+
+        <!-- Subjects -->
+        <div class="section">
+          <p>Subjects:</p>
+          <label
+            ><input type="checkbox" name="subjects" value="English" />
+            English</label
+          >
+          <label
+            ><input type="checkbox" name="subjects" value="Hindi" />
+            Hindi</label
+          >
+          <label
+            ><input type="checkbox" name="subjects" value="Physics" />
+            Physics</label
+          >
+          <label
+            ><input type="checkbox" name="subjects" value="Math" /> Math</label
+          >
+        </div>
+
+        <!-- Gender -->
+        <div class="section">
+          <p>Gender:</p>
+          <label
+            ><input type="radio" name="gender" value="Male" required />
+            Male</label
+          >
+          <label
+            ><input type="radio" name="gender" value="Female" required />
+            Female</label
+          >
+        </div>
+
+        <!-- Branch -->
+        <div class="input-group">
+          <select name="branch" required>
+            <option value="">Select Branch</option>
+            <option value="CSE">CSE</option>
+            <option value="CS">CS</option>
+            <option value="CSE-IOT">CSE-IOT</option>
+            <option value="CSE-IT">CSE-IT</option>
+          </select>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
