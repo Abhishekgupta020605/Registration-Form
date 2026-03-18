@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    padding: 25px;
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.form-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* INPUT GROUP */
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    outline: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    transition: 0.3s, background-color 0.3s;
+}
+
+.input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+select option {
+    color: black;
+}
+
+/* LABEL FLOAT */
+.input-group label {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    pointer-events: none;
+    transition: 0.3s;
+    color: #ddd;
+    background: transparent;
+    padding: 0 5px;
+}
+
+.input-group input:focus+label,
+.input-group input:valid+label {
+    top: -10px;
+    font-size: 12px;
+    color: #fff;
+}
+
+/* FLOAT SELECT LABEL */
+.input-group select:focus+label,
+.input-group select.filled+label {
+    top: -10px;
+    font-size: 12px;
+    color: #fff;
+}
+
+/* AUTOFILL FIX */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    -webkit-text-fill-color: white !important;
+    -webkit-box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0.15) inset !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+/* SECTION */
+.section {
+    margin-bottom: 25px;
+}
+
+.section p {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.section label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+/* BUTTON */
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #ff7b00;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff5500;
+    transform: scale(1.05);
+}
+
+/* Float label for date only when focused or filled */
+.input-group input[type="date"]+label {
+    top: -4px;
+    font-size: 13px;
+    color: #ddd;
+}
+
+.input-group input[type="date"]:focus+label,
+.input-group input[type="date"].filled+label {
+    top: -14px;
+    font-size: 12px;
+    color: #fff;
+}
